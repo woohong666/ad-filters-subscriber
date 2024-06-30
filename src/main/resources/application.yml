@@ -18,52 +18,72 @@ application:
   rule:
     #远程订阅规则 （！使用前请删除下方示例配置, 注意缩进）
     remote:
-      - name: 'Subscription 1'               #可选参数: 规则名称，如无将使用 path 作为名称
-        path: 'https://example.org/rule.txt' #必要参数: 规则url，仅支持 http/https，不限定响应内容格式
-        type: easylist                       #可选参数: 规则类型：easylist (默认)、dnsmasq、clash、smartdns、hosts
+      - name: AdGuard 基础过滤器
+        path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt
 
-      - name: 'Subscription 2'
-        path: 'http://example.org/rule.txt'
+      - name: AdGuard 移动广告过滤器
+        path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_11_Mobile/filter.txt
+
+      - name: AdGuard 防跟踪保护过滤器
+        path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_3_Spyware/filter.txt
+
+      - name: AdGuard URL跟踪过滤器
+        path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_17_TrackParam/filter.txt
+
+      - name: AdGuard 恼人广告过滤器
+        path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_14_Annoyances/filter.txt
+
+      - name: AdGuard 解除搜索广告和自我推销过滤器
+        path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_10_Useful/filter.txt
+
+      - name: AdGuard 中文过滤器
+        path: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt
+
+      - name: 大圣净化
+        path: https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts
+
+      - name: AWAvenue-Adblock-Rule
+        path: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+
+      - name: NoAppDownload
+        path: https://raw.githubusercontent.com/Noyllopa/NoAppDownload/master/NoAppDownload.txt
+
+      - name: Cats-Team AdBlock List Lite
+        path: https://raw.githubusercontent.com/Cats-Team/AdRules/main/adblock_lite.txt
+
+      - name: 1Hosts (Lite)
+        path: https://o0.pages.dev/Lite/adblock.txt
+
+      - name: hagezi/dns-blocklists pro
+        path: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt
 
     #本地规则文件
     local:
-      - name: 'local rule'
-        path: 'local-rule.txt' #支持绝对/相对路径
+      - name: 'xndeye private List'
+        path: 'rule/private.txt'
 
   #输出配置
   output:
-    #文件头配置，将自动作为注释添加至每个规则文件开始
-    #可使用占位符 ${name}、${type}、${desc} 以及 ${date} (当前日期)
+    #生成的规则文件头部内容, 占位符${name}将被替换为文件名，如all.txt,  ${date} 将被替换为当前日期
     file_header: |
-      ADFS AdBlock ${type}
-      Last Modified: ${date}
-      Homepage: https://github.com/fordes123/ad-filters-subscriber/
+      [xndeye Adblock List]
+      ! Title: ${name}
+      ! Last Modified: ${date}
+      ! Homepage: https://github.com/fordes123/ad-filters-subscriber/
 
     path: rule #输出规则文件的路径，支持绝对/相对路径
-    #输出规则文件列表 （！注意缩进，且每个类型只能输出一个文件）
+    #输出规则文件列表 （！注意缩进）
     files:
-      - name: easylist.txt     #必要参数: 文件名
-        type: easylist         #必要参数: 文件类型: easylist、dnsmasq、clash、smartdns、hosts
-        desc: 'ADFS EasyList'  #可选参数: 文件描述，可在file_header中通过 ${} 中使用
-        filter:
-          - basic              #基本规则，不包含任何控制、匹配符号, 可以转换为 hosts
-          - wildcard           #通配规则，仅使用通配符
-          - unknown            #其他规则，如使用了正则、高级修饰符号等，这表示目前无法支持
-
-      - name: dns.txt
-        type: easylist
-        filter:
-          - basic
-          - wildcard
-
-      - name: dnsmasq.txt
-        type: dnsmasq
-
-      - name: clash.yaml
-        type: clash
-
-      - name: smartdns.txt
-        type: smartdns
-
-      - name: hosts.txt
-        type: hosts
+      all.txt: #输出文件名
+        - DOMAIN  #域名规则，仅完整域名
+        - REGEX   #正则规则，包含正则的域名规则，AdGH支持
+        - MODIFY  #修饰规则，添加了一些修饰符号的规则，AdG支持
+        - HOSTS   #Hosts规则
+      dns.txt:
+        - DOMAIN
+        - REGEX
+        - HOSTS
+      hosts.txt:
+        - HOSTS
+      modify.txt:
+        - MODIFY
