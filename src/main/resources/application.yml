@@ -99,12 +99,3 @@ application:
 
       - name: hosts.txt
         type: hosts
-        
-      - name: all.txt #输出文件名
-        type: all
-          
-      - name: dns.txt
-        type: dns
-    
-      - name: modify.txt
-        type: modify
