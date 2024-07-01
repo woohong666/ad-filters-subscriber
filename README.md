@@ -34,9 +34,8 @@
 - [x] clash
 - [x] smartdns
 - [x] hosts
-      ## AbBlock List
 
-广告过滤规则整合，使用 [fordes123/ad-filters-subscriber v2](https://github.com/fordes123/ad-filters-subscriber/tree/v2)
+## AbBlock List
 构建
 
 > ⚠️ 此版本尚在测试中，规则转换错误请反馈至 [此处](https://github.com/fordes123/ad-filters-subscriber/issues)
@@ -49,7 +48,49 @@
 | `clash.yaml`    | clash 及其衍生版本                |  [link][clash-raw]   |  [link][clash-ghproxy]   |  [link][clash-jsdelivr]   |
 | `smartdns.conf` | smartdns                    | [link][smartdns-raw] | [link][smartdns-ghproxy] | [link][smartdns-jsdelivr] |
 | `hosts`         | 几乎所有操作系统原生支持                |  [link][hosts-raw]   |  [link][hosts-ghproxy]   |  [link][hosts-jsdelivr]   |
-| `private.txt`   | 本仓库维护的私有规则，以 easylist 形式提供  | [link][private-raw]  | [link][private-ghproxy]  | [link][private-jsdelivr]  
+| `private.txt`   | 本仓库维护的私有规则，以 easylist 形式提供  | [link][private-raw]  | [link][private-ghproxy]  | [link][private-jsdelivr]  |
+
+[easylist-raw]: https://raw.githubusercontent.com//woohong666/ad-filters-subscriber/v2/rule/easylist.txt
+
+[easylist-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/woohong666/ad-filters-subscriber/v2/rule/easylist.txt
+
+[easylist-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber@v2/rule/easylist.txt
+
+[dns-raw]: https://raw.githubusercontent.com//woohong666/ad-filters-subscriber/v2/rule/dns.txt
+
+[dns-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/woohong666/ad-filters-subscriber/v2/rule/dns.txt
+
+[dns-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber@v2/rule/dns.txt
+
+[dnsmasq-raw]: https://raw.githubusercontent.com//woohong666/ad-filters-subscriber/v2/rule/dnsmasq.conf
+
+[dnsmasq-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/woohong666/ad-filters-subscriber/v2/rule/dnsmasq.conf
+
+[dnsmasq-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber@v2/rule/dnsmasq.conf
+
+[clash-raw]: https://raw.githubusercontent.com//woohong666/ad-filters-subscriber/v2/rule/clash.yaml
+
+[clash-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/woohong666/ad-filters-subscriber/v2/rule/clash.yaml
+
+[clash-jsdelivr]: https://gcore.jsdelivr.net/gh/xndeye/ad-filters-subscriber@v2/rule/clash.yaml
+
+[smartdns-raw]: https://raw.githubusercontent.com//woohong666/ad-filters-subscriber/v2/rule/smartdns.conf
+
+[smartdns-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/woohong666/ad-filters-subscriber/v2/rule/smartdns.conf
+
+[smartdns-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber@v2/rule/smartdns.conf
+
+[hosts-raw]: https://raw.githubusercontent.com//woohong666/ad-filters-subscriber/v2/rule/hosts
+
+[hosts-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/woohong666/ad-filters-subscriber/v2/rule/hosts
+
+[hosts-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber@v2/rule/hosts
+
+[private-raw]: https://raw.githubusercontent.com//woohong666/ad-filters-subscriber/v2/rule/private.txt
+
+[private-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/woohong666/ad-filters-subscriber/v2/rule/private.txt
+
+[private-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber@v2/rule/private.txt
 
 <details>
 <summary>点击查看上游规则</summary>
@@ -69,6 +110,7 @@
     <li><a href="https://github.com/hagezi/dns-blocklists">hagezi/dns-blocklists normal</a></li>
 </ul>
 </details>
+
 #### 注意事项
 1. 仅支持基本规则转换，即域名、通配域名构成的规则，对形如 `||example.org^$popup` 等规则无法转换(合并、去重不受影响)
 2. 接受不可避免的缩限，如 `||example.org^` 将拦截 example.org 及其所有子域，但将其转换为 hosts 格式时，将无法匹配子域名。
