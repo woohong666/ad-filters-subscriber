@@ -54,43 +54,43 @@
 
 [easylist-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/woohong666/ad-filters-subscriber/v2/rule/easylist.txt
 
-[easylist-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber@v2/rule/easylist.txt
+[easylist-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber/v2/rule/easylist.txt
 
 [dns-raw]: https://raw.githubusercontent.com//woohong666/ad-filters-subscriber/v2/rule/dns.txt
 
 [dns-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/woohong666/ad-filters-subscriber/v2/rule/dns.txt
 
-[dns-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber@v2/rule/dns.txt
+[dns-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber/v2/rule/dns.txt
 
 [dnsmasq-raw]: https://raw.githubusercontent.com//woohong666/ad-filters-subscriber/v2/rule/dnsmasq.conf
 
 [dnsmasq-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/woohong666/ad-filters-subscriber/v2/rule/dnsmasq.conf
 
-[dnsmasq-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber@v2/rule/dnsmasq.conf
+[dnsmasq-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber/v2/rule/dnsmasq.conf
 
 [clash-raw]: https://raw.githubusercontent.com//woohong666/ad-filters-subscriber/v2/rule/clash.yaml
 
 [clash-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/woohong666/ad-filters-subscriber/v2/rule/clash.yaml
 
-[clash-jsdelivr]: https://gcore.jsdelivr.net/gh/xndeye/ad-filters-subscriber@v2/rule/clash.yaml
+[clash-jsdelivr]: https://gcore.jsdelivr.net/gh/xndeye/ad-filters-subscriber/v2/rule/clash.yaml
 
 [smartdns-raw]: https://raw.githubusercontent.com//woohong666/ad-filters-subscriber/v2/rule/smartdns.conf
 
 [smartdns-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/woohong666/ad-filters-subscriber/v2/rule/smartdns.conf
 
-[smartdns-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber@v2/rule/smartdns.conf
+[smartdns-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber/v2/rule/smartdns.conf
 
 [hosts-raw]: https://raw.githubusercontent.com//woohong666/ad-filters-subscriber/v2/rule/hosts
 
 [hosts-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/woohong666/ad-filters-subscriber/v2/rule/hosts
 
-[hosts-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber@v2/rule/hosts
+[hosts-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber/v2/rule/hosts
 
 [private-raw]: https://raw.githubusercontent.com//woohong666/ad-filters-subscriber/v2/rule/private.txt
 
 [private-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/woohong666/ad-filters-subscriber/v2/rule/private.txt
 
-[private-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber@v2/rule/private.txt
+[private-jsdelivr]: https://gcore.jsdelivr.net/gh/woohong666/ad-filters-subscriber/v2/rule/private.txt
 
 <details>
 <summary>点击查看上游规则</summary>
