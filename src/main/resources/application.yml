@@ -59,7 +59,7 @@ application:
 
     #本地规则文件
     local:
-      - name: 'xndeye private List'
+      - name: 'woohong666 private List'
         path: 'rule/private.txt'
 
   #输出配置
@@ -74,16 +74,28 @@ application:
     path: rule #输出规则文件的路径，支持绝对/相对路径
     #输出规则文件列表 （！注意缩进）
     files:
-      all.txt: #输出文件名
-        - DOMAIN  #域名规则，仅完整域名
-        - REGEX   #正则规则，包含正则的域名规则，AdGH支持
-        - MODIFY  #修饰规则，添加了一些修饰符号的规则，AdG支持
-        - HOSTS   #Hosts规则
-      dns.txt:
-        - DOMAIN
-        - REGEX
-        - HOSTS
-      hosts.txt:
-        - HOSTS
-      modify.txt:
-        - MODIFY
+      - name: easylist.txt     #必要参数: 文件名
+        type: easylist         #必要参数: 文件类型: easylist、dnsmasq、clash、smartdns、hosts
+        desc: 'ADFS EasyList'  #可选参数: 文件描述，可在file_header中通过 ${} 中使用
+        filter:
+          - basic              #基本规则，不包含任何控制、匹配符号, 可以转换为 hosts
+          - wildcard           #通配规则，仅使用通配符
+          - unknown            #其他规则，如使用了正则、高级修饰符号等，这表示目前无法支持
+
+      - name: dns.txt
+        type: easylist
+        filter:
+          - basic
+          - wildcard
+
+      - name: dnsmasq.txt
+        type: dnsmasq
+
+      - name: clash.yaml
+        type: clash
+
+      - name: smartdns.txt
+        type: smartdns
+
+      - name: hosts.txt
+        type: hosts
