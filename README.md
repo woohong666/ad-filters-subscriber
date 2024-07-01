@@ -51,7 +51,7 @@
 | `hosts`         | 几乎所有操作系统原生支持                |  [link][hosts-raw]   |  [link][hosts-ghproxy]   |  [link][hosts-jsdelivr]   |
 | `private.txt`   | 本仓库维护的私有规则，以 easylist 形式提供  | [link][private-raw]  | [link][private-ghproxy]  | [link][private-jsdelivr]  |
 
-[easylist-raw]: https://raw.githubusercontent.com/woohong666/adblock_list/beta/rule/easylist.txt
+[easylist-raw]: https://raw.githubusercontent.com/woohong666/adblock_list/v2/rule/easylist.txt
 
 [easylist-ghproxy]: https://ghproxy.net/https://raw.githubusercontent.com/woohong666/adblock_list/beta/rule/easylist.txt
 
