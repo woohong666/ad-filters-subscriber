@@ -5,11 +5,11 @@
   </p>
 <!-- Badges -->
 <p>
-  <img src="https://img.shields.io/github/last-commit/fordes123/ad-filters-subscriber?style=flat-square" alt="last update" />
-  <img src="https://img.shields.io/github/forks/fordes123/ad-filters-subscriber?style=flat-square" alt="forks" />
-  <img src="https://img.shields.io/github/stars/fordes123/ad-filters-subscriber?style=flat-square" alt="stars" />
-  <img src="https://img.shields.io/github/issues/fordes123/ad-filters-subscriber?style=flat-square" alt="open issues" />
-  <img src="https://img.shields.io/github/license/fordes123/ad-filters-subscriber?style=flat-square" alt="license" />
+  <img src="https://img.shields.io/github/last-commit/woohong666/ad-filters-subscriber?style=flat-square" alt="last update" />
+  <img src="https://img.shields.io/github/forks/woohong666/ad-filters-subscriber?style=flat-square" alt="forks" />
+  <img src="https://img.shields.io/github/stars/woohong666/ad-filters-subscriber?style=flat-square" alt="stars" />
+  <img src="https://img.shields.io/github/issues/woohong666/ad-filters-subscriber?style=flat-square" alt="open issues" />
+  <img src="https://img.shields.io/github/license/woohong666/ad-filters-subscriber?style=flat-square" alt="license" />
 </p>
 
 <h4>
@@ -34,7 +34,24 @@
 - [x] clash
 - [x] smartdns
 - [x] hosts
-
+<details>
+<summary>点击查看上游规则</summary>
+<ul>
+    <li><a href="https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt">AdGuard 基础过滤器</a></li>
+    <li><a href="https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_11_Mobile/filter.txt">AdGuard 移动广告过滤器</a></li>
+    <li><a href="https://adguard.com/kb/zh-CN/general/ad-filtering/adguard-filters/">AdGuard 防跟踪保护过滤器</a></li>
+    <li><a href="https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_17_TrackParam/filter.txt">AdGuard URL跟踪过滤器</a></li>
+    <li><a href="https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_14_Annoyances/filter.txt">AdGuard 恼人广告过滤器</a></li>
+    <li><a href="https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_10_Useful/filter.txt">AdGuard 解除搜索广告和自我推销过滤器</a></li>
+    <li><a href="https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt">AdGuard 中文过滤器</a></li>
+    <li><a href="https://github.com/jdlingyu/ad-wars">ad-wars</a></li>
+    <li><a href="https://github.com/TG-Twilight/AWAvenue-Adblock-Rule">AWAvenue-Adblock-Rule</a></li>
+    <li><a href="https://raw.githubusercontent.com/Noyllopa/NoAppDownload/master/NoAppDownload.txt">NoAppDownload</a></li>
+    <li><a href="https://github.com/Cats-Team/AdRules">Cats-Team/AdRules AdBlock List Lite</a></li>
+    <li><a href="https://github.com/badmojr/1Hosts">1Hosts (Lite)</a></li>
+    <li><a href="https://github.com/hagezi/dns-blocklists">hagezi/dns-blocklists normal</a></li>
+</ul>
+</details>
 #### 注意事项
 1. 仅支持基本规则转换，即域名、通配域名构成的规则，对形如 `||example.org^$popup` 等规则无法转换(合并、去重不受影响)
 2. 接受不可避免的缩限，如 `||example.org^` 将拦截 example.org 及其所有子域，但将其转换为 hosts 格式时，将无法匹配子域名。
